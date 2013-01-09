@@ -2,24 +2,46 @@
 
 A Qt application template using the CMake build system, including CTest for unit testing and CPack for installation packages creation.
 
+**This project is currently just an experiment to learn CMake.**
+
 ## Supported platforms
 
 EdelApp has been developed and tested on Mac OS X 10.6.8, Qt 4.8.3 and CMake 2.8.9.
 
-## Usage
+## Use the EdelApp template for your next Qt application
 
-### Build
-* git clone git@github.com:edeltech/EdelApp.git
-* mkdir EdelApp-build
-* cd EdelApp-build
-* cmake ../EdelApp
-* make
+Create a new repository for your application and clone it: (where `myapp` is the name of your repository)
 
-### Build and run unit tests
-* make check
+`$ git clone git@github.com:<USERNAME>/myapp.git`
+`$ cd myapp`
 
-### Create package
-* make package
+Add EdelApp as upstream source:
+
+`$ git remote add upstream git@github.com:edeltech/EdelApp.git`
+`$ git fetch upstream`
+
+Checkout the master branch:
+
+`get checkout master`
+
+Now let's configure and build:
+
+`$ cd ..`  
+`$ mkdir myapp-build`  
+`$ cmake ../myapp`  
+`$ make`  
+
+Run the unit tests:
+
+`$ make check`
+
+And finally, create an installation package:
+
+`$ make package`
+
+## What's Next ?
+
+Read through the source code and CMake files you just checked out and build on it !
 
 ## Authors
 
