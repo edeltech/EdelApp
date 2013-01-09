@@ -12,32 +12,44 @@ EdelApp has been developed and tested on Mac OS X 10.6.8, Qt 4.8.3 and CMake 2.8
 
 Create a new repository for your application and clone it: (where `myapp` is the name of your repository)
 
-`$ git clone git@github.com:<USERNAME>/myapp.git`  
-`$ cd myapp`
+<pre>
+$ git clone git@github.com:<USERNAME>/myapp.git
+$ cd myapp
+</pre>
 
 Add EdelApp as upstream source:
 
-`$ git remote add upstream git@github.com:edeltech/EdelApp.git`  
-`$ git fetch upstream`
+<pre>
+$ git remote add upstream git@github.com:edeltech/EdelApp.git 
+$ git fetch upstream
+</pre>
 
 Checkout the master branch:
 
-`get checkout master`
+<pre>
+$ git checkout master
+</pre>
 
 Now let's configure and build:
 
-`$ cd ..`  
-`$ mkdir myapp-build`  
-`$ cmake ../myapp`  
-`$ make`  
+<pre>
+$ cd ..
+$ mkdir myapp-build
+$ cmake ../myapp
+$ make
+</pre>
 
 Run the unit tests:
 
-`$ make check`
+<pre>
+$ make check
+</pre>
 
 And finally, create an installation package:
 
-`$ make package`
+<pre>
+$ make package
+</pre>
 
 ## What's Next ?
 
