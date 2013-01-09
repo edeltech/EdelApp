@@ -1,4 +1,4 @@
-**EdelApp**
+# EdelApp
 
 A Qt application template using the CMake build system, including CTest for unit testing and CPack for installation packages creation.
 
