@@ -12,6 +12,7 @@
 
 # Qt-es
 
+CMakeLists.txt.user
 *.pro.user
 *.pro.user.*
 moc_*.cpp
