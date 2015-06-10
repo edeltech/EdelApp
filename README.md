@@ -6,36 +6,32 @@ A Qt application template using the CMake build system, including CTest for unit
 
 ## Supported platforms
 
-EdelApp has been developed and tested on Mac OS X 10.6.8, Qt 4.8.3 and CMake 2.8.9.
+EdelApp has been developed and tested on Mac OS X 10.10.3, Qt 5.5 and CMake 3.2.2.
+
+## Setup your environment
+
+	export CMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH:<path_to>/Qt/5.5/clang_64"
 
 ## Give it a try
 
 Get the code:
 
-<pre>
-$ git clone git@github.com:edeltech/EdelApp.git
-</pre>
+	$ git clone git@github.com:edeltech/EdelApp.git
 
 Configure and build (out-of-source):
 
-<pre>
-$ mkdir EdelApp-build
-$ cd EdelApp-build
-$ cmake ../EdelApp
-$ make
-</pre>
+	$ mkdir EdelApp-build
+	$ cd EdelApp-build
+	$ cmake ../EdelApp
+	$ make
 
 Run the unit tests:
 
-<pre>
-$ make check
-</pre>
+	$ make check
 
 And finally, create an installation package:
 
-<pre>
-$ make package
-</pre>
+	$ make package
 
 ## What's Next ?
 
@@ -55,6 +51,10 @@ Read through the source code and CMake files you just checked out and build on i
 #### 0.1.0 (Jan 7, 2013)
 
 * Initial release
+
+#### 0.2.0 (Jun 10, 2015)
+
+* Update to Qt5
 
 ## License
 

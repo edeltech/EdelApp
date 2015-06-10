@@ -1,7 +1,7 @@
 #include "dummy.h"
 
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
+#include <QLabel>
+#include <QVBoxLayout>
 
 Dummy::Dummy(QWidget * parent) : QWidget(parent)
 {

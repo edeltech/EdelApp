@@ -1,8 +1,11 @@
 # find all source files
 FILE(GLOB_RECURSE APP_SRCS *.cpp)
 
+# add Qt5 include directories need by this lib
+include_directories(${Qt5Widgets_INCLUDE_DIRS})
+
 # add resource file
-QT4_ADD_RESOURCES(APP_RCCS "${PROJECT_NAME_LOWERCASE}.qrc")
+QT5_ADD_RESOURCES(APP_RCCS "${PROJECT_NAME_LOWERCASE}.qrc")
 
 # add a resource file for windows
 IF(MSVC)
@@ -31,9 +34,9 @@ ENDIF()
 # add app executable
 ADD_EXECUTABLE(${PROJECT_NAME} ${GUI_TYPE} ${APP_SRCS})
 
-MESSAGE(STATUS "Link target ${CMAKE_PROJECT_NAME} against ${QT_LIBRARIES} and ${EDEL_LIBRARIES}")
+MESSAGE(STATUS "Link target ${CMAKE_PROJECT_NAME} against Qt5::Widgets and ${EDEL_LIBRARIES}")
 
-TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} ${QT_LIBRARIES} ${EDEL_LIBRARIES})
+TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} Qt5::Widgets ${EDEL_LIBRARIES})
 
 # define app installation paths
 INSTALL(TARGETS ${PROJECT_NAME}
@@ -50,5 +53,3 @@ ELSEIF(WIN32)
 ELSE()
     SET(EXECUTABLE_NAME "${BIN_INSTALL_DIR}/${PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
 ENDIF()
-
-INSTALL_QT4_EXECUTABLE("${EXECUTABLE_NAME}")

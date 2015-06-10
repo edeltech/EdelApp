@@ -1,7 +1,7 @@
 #ifndef DUMMY_H
 #define DUMMY_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 class Dummy : public QWidget
 {
