@@ -2,7 +2,7 @@
 FILE(GLOB_RECURSE APP_SRCS *.cpp)
 
 # add Qt5 include directories need by this lib
-include_directories(${Qt5Widgets_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${Qt5Widgets_INCLUDE_DIRS})
 
 # add resource file
 QT5_ADD_RESOURCES(APP_RCCS "${PROJECT_NAME_LOWERCASE}.qrc")

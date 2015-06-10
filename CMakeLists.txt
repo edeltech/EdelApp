@@ -41,13 +41,9 @@ SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # automatically handle moc files
 SET(CMAKE_AUTOMOC ON)
-SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 # find Qt5 packages
 FIND_PACKAGE(Qt5Widgets REQUIRED)
-FIND_PACKAGE(Qt5Multimedia REQUIRED)
-FIND_PACKAGE(Qt5MultimediaWidgets REQUIRED)
-FIND_PACKAGE(Qt5Qml REQUIRED)
 FIND_PACKAGE(Qt5Test REQUIRED)
 
 # find corefoundation framework
@@ -59,7 +55,6 @@ MESSAGE(STATUS "Building ${PROJECT_NAME} in ${CMAKE_BUILD_TYPE} mode")
 
 # enable unit tests
 ENABLE_TESTING()
-SET(TEST_LINK_LIBRARIES Qt5::Test)
 
 # emulate 'make check'
 ADD_CUSTOM_TARGET(check COMMAND ${CMAKE_CTEST_COMMAND})
@@ -81,14 +76,6 @@ SET(CMAKE_MACOSX_RPATH ON)
 
 # add src files directory
 ADD_SUBDIRECTORY(src)
-
-# packaging using cpack
-IF(APPLE)
-    SET(CMAKE_INSTALL_PREFIX "/Applications")
-ENDIF()
-
-MESSAGE(STATUS "${PROJECT_NAME} will be installed to ${CMAKE_INSTALL_PREFIX}")
-
 
 # define CPack variables (NOTE: Do this is a separte .cmake file)
 SET(CPACK_GENERATOR "TBZ2")
